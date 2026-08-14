@@ -1,0 +1,14 @@
+.component{
+    text-align: center;
+    margin:20px
+}
+.header{
+    color:green;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    color: rgb(94, 165, 94);
+}
