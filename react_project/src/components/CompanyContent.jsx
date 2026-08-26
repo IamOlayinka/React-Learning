@@ -1,4 +1,4 @@
-import { Children } from "react";
+
 
 const CompanyContent = (props) => {
 

@@ -1,25 +1,25 @@
-import CompanyContent from './components/CompanyContent.jsx';
-import Header from './components/Header/Header.jsx';
-import Title from './components/Title/Title.jsx';
-import PropertyList from './components/PropertyList/PropertyList.jsx';
-import Footer from './components/Footer/Footer.jsx';
+
+import './App.css';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Title from './components/Title/Title';
+import properties from "./data/properties";
+import PropertyList from './components/PropertyList/PropertyList';
+// import Footer from './components/Footer/Footer';
 
 const App = () => {
-    
+     
 
     return (
-        <>
-            {/* <CompanyContent name="Amazon" description="This is a description of the Amazon company." />
-            <CompanyContent name="Apple" description="This is a description of Apple company." />  
-            <CompanyContent name="Google" description="This is a description of the Google company.">This is the children </CompanyContent> */}
-            <Header />'
+        <div className='app'>
+            <Header />
             <main>
                 <Title />
-                <PropertyList />
+                <PropertyList properties={properties} />
             </main>
+            <Footer/> 
             
-            <Footer/>
-        </>
+        </div>
     );
     
 }
