@@ -1,0 +1,10 @@
+.icon-with-text{
+    /* Set display to inline-flex to only take the width it content need */
+    display: inline-flex;
+    /* Centering item vertically */
+    align-items:center;
+    /* Space between each item */
+    gap:0.25rem;
+    /* Adding margin around the item */
+    margin:0 0.25rem;
+}

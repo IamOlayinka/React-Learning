@@ -1,7 +1,10 @@
 import "./Property.css";
 import PropertyImage from "./PropertyImage/PropertyImage";
-import PropertyTypeLable from "./PropertyImage/PropertyTypeLabel";
-
+import PropertyTypeLabel from "./PropertyImage/PropertyTypeLabel/PropertyTypeLabel";
+import PropertyBanner from "./PropertyImage/PropertyBanner/PropertyBanner";
+import IconWithText from "./PropertyImage/IconWithText/IconWithText";
+import { Bath, Bed, Maximize } from "lucide-react";
+import PropertyAttribute from "./PropertyAttribute/PropertyAttribute";
 
 const Property = ({
     image,
@@ -20,9 +23,30 @@ const Property = ({
             style={{opacity: !available? "0.5" : "1"}}
         >
             <PropertyImage image={image}>
-                <PropertyTypeLable type={type} />
+                <PropertyTypeLabel type={type} />
+                {!available && <PropertyBanner />}
+                <div className="property-info">
+                    <IconWithText
+                        Icon={Bed}
+                        text={bedrooms}
+                    />
+                    <span>|</span>
+                    <IconWithText
+                        Icon={Bath}
+                        text={bathrooms}
+                    />
+                    <span>|</span>
+                    <IconWithText
+                        Icon={Maximize}
+                        text={`${surface} m²`}
+                    />
+                </div> 
+                
             </PropertyImage>
-            <div>Property Attributes.</div>
+            
+            <PropertyAttribute text={address} />
+            <PropertyAttribute text={`$${rent} / month`} color="#48ebca" bold/>
+            <PropertyAttribute text={`Available from: ${date}`}/>
           
         </div>
     );

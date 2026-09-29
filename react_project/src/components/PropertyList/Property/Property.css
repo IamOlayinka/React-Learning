@@ -12,3 +12,22 @@
     /* Ensure all cards have the same width*/
     width: 18.75rem;
 }
+
+.property-info{
+    /* Add a semi-transparent balck background */
+    background:rgba(0,0,0,0.7);
+    /* Set the text color to white */
+    color:#fff;
+    /*Position the ifo box within the property image */
+    font-size: 0.875rem;
+    /* Position the info box within the property image */
+    position: absolute;
+    /* Position the info box 0.625rem from the bottom */
+    bottom:0.625rem;
+    /* Position the info box 0.625rem from the right */
+    right: 0.625rem;
+    /*Adding spacing around the text  */
+    padding: 0.3125rem 0.625rem;
+    /*Border radius to the edge  */
+    border-radius: 0.25rem;
+}
