@@ -5,6 +5,7 @@ import {Trash, RefreshCcw, ArrowDownWideNarrow} from "lucide-react";
 
 // This component will display a list of animals with their name, type, and speed. It will also have buttons to add a new random animal, remove an animal, replace an animal with a new random animal, and sort the animals by speed in ascending order. The state of the animals will be managed using the useState hook and the produce function from immer to create a new state based on the current state.
 const AnimalUpdate = () => {
+   
     // This will create a state variable called animals with an initial value of an array of objects representing different animals. Each object will have an id, name, type, and speed property.
     const [animals, setAnimal] = useState([
         { id: 1, name: "Dog", type: "Mammal", speed: 100 },
@@ -12,6 +13,7 @@ const AnimalUpdate = () => {
         { id: 3, name: "Eagle", type: "Bird", speed: 160 },
         { id: 4, name: "Shark", type: "Fish", speed: 80 },
     ]);
+    
     // This will create a new array of animals with random id, name, type, and speed. The id will be generated using the Date.now() method to ensure that it is unique. The name, type, and speed will be randomly selected from the newAnimal array.
     const newAnimal = [
         { id: Date.now(), name: "Horse", type: "Mammal", speed: 88 },
@@ -44,7 +46,8 @@ const AnimalUpdate = () => {
                 
             
         </ul>
-        )); 
+    )); 
+    
     // function to add a new random animal from the newAnimal array to the animals state using the produce function from immer to create a new state based on the current state.   
     const addAnimal = () => {
         setAnimal(
@@ -52,6 +55,7 @@ const AnimalUpdate = () => {
                 draft.push(newAnimal[Math.floor(Math.random() * newAnimal.length)]);
             }))
     };
+    
    // function to remove an animal from the animals state based on its id using the filter function to create a new state based on the current state.
     const removeAnimal = (id) => {
         setAnimal(animals.filter(animal => animal.id !== id));
