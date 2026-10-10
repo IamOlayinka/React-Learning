@@ -1,6 +1,6 @@
 const CartDetails = ({carts, totalItems, getItemPrice, getTotalPrice}) => {
     return (
-        <div style={{ border: "1px solid black", padding: "20px", width: "300px", margin: "0 auto" }}>
+        <div style={{ border: "0.5px solid grey", padding: "20px", width: "300px", margin: "0 auto" }}>
             <h2 style={{ textAlign: "center" }}>Cart Details</h2>
             
              {carts.map((item, index) => (
